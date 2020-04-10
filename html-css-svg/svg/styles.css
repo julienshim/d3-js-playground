@@ -2,13 +2,3 @@ body {
   margin: 0px;
   overflow: hidden;
 }
-
-.lines {
-  stroke: black;
-  stroke-width: 10;
-}
-
-.lines path {
-  stroke: rgb(37, 101, 109);
-  stroke-linejoin: round;
-}
