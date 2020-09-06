@@ -1,7 +1,9 @@
 import { cars } from './app/cars';
+import {generateReport} from './app/generateReport';
+
 import "./main.scss";
 
-const message = cars[0].make;
+const message = generateReport(cars, 2000);
 
 document.getElementById('message-element')
   .textContent = message;
