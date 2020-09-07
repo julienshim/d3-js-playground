@@ -1,9 +1,11 @@
-import { cars } from './app/cars';
-import {generateReport} from './app/generateReport';
+import { getCars } from "./app/getCars";
+import { generateReport } from "./app/generateReport";
 
 import "./main.scss";
 
-const message = generateReport(cars, 2000);
+document.getElementById("message-element").textContent = "Loading...";
 
-document.getElementById('message-element')
-  .textContent = message;
+getCars().then((cars) => {
+  const message = generateReport(cars, 2000);
+  document.getElementById("message-element").textContent = message;
+});
